@@ -1,0 +1,259 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Body */
+:root {
+    --primary-color: #e6e6e6;
+	--secondary-color: #dcdef0;
+    --buttons: #0000FF;
+    --blurple: #658aea;
+	--just-text: #0000FF;
+    --white-text: #ffffff;
+    --error-color: #fc4747;
+    --color: #0000FF;
+    --light-color: #62ace9;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--primary-color);
+    line-height: 1.6;
+    color: #0000FF;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Buttons */
+.btn {
+    border: none;
+    margin: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: var(--buttons);
+    box-shadow: 0 3px 10px rgba(163, 163, 163, 0.2);
+    transition: all 0.5s;
+}
+
+.btn-blurple {
+    background-color: #7289DA;
+}
+
+.btn i {
+    top: 5px;
+    font-size: 150%;
+    margin: 0 6px 0 0;
+    position: relative;
+}
+
+.btn:hover {
+    color: var(--white-text);
+    background-color: var(--blurple);
+}
+
+
+/* Nav Bar */
+.navbar {
+    color: #ffffff;
+    height: 150px;
+    font-weight: bold;
+    background-color: var(--blurple);
+    border-bottom: var(--color) 5px solid;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--white-text);
+    padding: 50px;
+    margin: 0;
+    padding: 0 50px;
+    
+}
+
+.navbar a:hover {
+    color: #001aff;
+}
+
+.navbar .currentPage,
+.navbar .currentPage:hover {
+    color: var(--light-color);
+}
+
+.navbar .flex {
+    justify-content: space-between;
+} 
+
+.navbar .logo {
+    margin: 1 10px;
+}
+
+.navbar .logo img {
+    height: 100%;
+    margin: auto 5px;
+}
+
+.navbar .logo p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0 2px;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    border-top: var(--color) 5px solid;
+    padding: 30px;
+    height: 180px;
+    background-color: var(--blurple);
+}
+
+.footer a {
+    font-weight: bold;
+
+}
+
+.footer .logo {
+    margin: 0 650px;
+}
+
+.footer .logo img {
+    height: 100%;
+    margin: auto 10px;
+}
+
+
+.footer .flex {
+    justify-content: flex-end;
+}
+
+.footer .footernav {
+    margin: 0  60px;
+}
+
+
+/* Animations */
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        font-size: 1.05rem;
+    }
+    
+    .navbar ul {
+        margin: 0 0 15px 0;
+    }
+    
+    .navbar .flex {
+        flex-direction: column;
+    }
+    
+    .navbar .logo {
+        margin: 10px 0 5px 0;
+        flex-direction: row;
+    }
+    
+    .navbar .logo p {
+        font-size: 1.5rem;
+    }
+    
+    .navbar .logo img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar {
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+    }
+    
+    .navbar .logo:active ul{
+        display: block;
+    }
+    
+    .navbar ul {
+        margin: 0 0 15px 0;
+    }
+    
+    .navbar .flex {
+        flex-direction: column;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar li {
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+    
+    .navbar .logo {
+        margin: 10px 0 5px 0;
+        flex-direction: row;
+    }
+    
+    .navbar .logo p {
+        font-size: 1.5rem;
+    }
+    
+    .navbar .logo img {
+        height: 50px;
+    }
+    
+    .footer {
+        height: auto;
+    }
+    
+    .footer .branding p,
+    .footer .branding h4 {
+        text-align: center;
+    }
+    
+    .footer .grid {
+        grid-template-columns: 1fr;
+		grid-template-rows: 1fr; 
+    }
+    
+    .footer .flex {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .footer .flex ul {
+        text-align: center;;
+    }
+    
+    .footer li {
+        margin: 5px 0;
+    }
+}
